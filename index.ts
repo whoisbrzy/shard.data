@@ -43,7 +43,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
         const response = {
             content: "An error occurred while executing this command.",
-            flags: MessageFlags.Ephemeral,
+            flags: MessageFlags.Ephemeral as const,
         };
 
         if (interaction.replied || interaction.deferred) {

@@ -14,9 +14,7 @@ export const statsCommand = {
         .setDescription("View Shard's host system statistics."),
 
     async execute(interaction: ChatInputCommandInteraction) {
-        await interaction.deferReply({
-            flags: MessageFlags.IsComponentsV2,
-        });
+        await interaction.deferReply();
 
         const [cpu, memory, filesystems, load] = await Promise.all([
             si.cpu(),
@@ -80,6 +78,7 @@ export const statsCommand = {
 
         await interaction.editReply({
             components: [container],
+            flags: MessageFlags.IsComponentsV2,
         });
     },
 };

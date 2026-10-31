@@ -10,6 +10,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["index.ts", "commands/**/*.ts", "utils/**/*.ts"],
+  "include": ["index.ts", "deploy-commands.ts","commands/**/*.ts", "utils/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
